@@ -9,7 +9,8 @@ CORES=
   File.exists?("NUM_CORES") ? IO.readlines("NUM_CORES")[0].chomp : "1";
 
 INSTALL_SCRIPT=<<EOF
-sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get install python-software-properties
+sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install -y nodejs npm
 EOF
